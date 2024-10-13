@@ -56,14 +56,20 @@ public class App {
      */
 
     public static int generarNumeroAleatorio(int num) {
+       try{ 
         double numero = 0;
         int contador = 0, lim_inf = 1000, lim_sup = 9000;
 
-        do {
-            numero = (int) (Math.random() * (lim_sup - lim_inf + 1) + lim_inf);
-            contador++;
-        } while (numero != num);
+            do {
+                numero = (int) (Math.random() * (lim_sup - lim_inf + 1) + lim_inf);
+                contador++;
+            } while (numero != num);
         return contador;
+       }
+        
+        catch{
+             return "Ha ocurrido un error \n" + e;
+        }
 
     }
 
